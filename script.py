@@ -8,7 +8,7 @@ from collections import Counter #counts number of items in list and prints dicti
 import pyttsx3
 engine = pyttsx3.init()
 def say(text):
-    engine.say(text)
+    engine.say("The number is " + str(text))
     engine.runAndWait()
 def createExamples():
 	numberArrayExamples = open('numArEx.txt','a')
@@ -73,7 +73,7 @@ def whatNumberisthis(filepath):
 				if eachpixelExample[element] == eachpixelinQuestion[element]:
 					matchedArray.append(int(currentElement))
 				element = element + 1
-	print (matchedArray)
+	#print (matchedArray)
 	element = Counter(matchedArray)
 	print(element)
 
